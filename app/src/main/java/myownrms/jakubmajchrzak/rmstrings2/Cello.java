@@ -86,7 +86,7 @@ public class Cello extends AppCompatActivity {
         btKazdyWschod.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                vShowToast();
+                vEmptySongToast();
             }
         });
         Button btPanieTwaDobroc= (Button) findViewById(R.id.btPanieTwaDobroc);
@@ -169,7 +169,7 @@ public class Cello extends AppCompatActivity {
             finish();
         return super.onOptionsItemSelected(item);
     }
-    public void vShowToast() {
+    public void vEmptySongToast() {
         Toast toast = Toast.makeText(getApplicationContext(), "Brak nut do tego utworu :(", Toast.LENGTH_SHORT);
         View view = toast.getView();
         view.setBackgroundResource(R.color.colorPrimary);
