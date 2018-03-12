@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="myownrms.jakubmajchrzak.rmstrings2.Cello">
+
+    <TextView
+        android:id="@+id/tvCello"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wiolonczela" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="13dp" />
+
+    <TextView
+        android:id="@+id/tvChooseSong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Wybierz utwór"
+        android:textSize="30dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="14dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btDuszoMaPanaChwal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Duszo ma pana chwal" />
+
+            <Button
+                android:id="@+id/btGenesis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Genesis" />
+
+            <Button
+                android:id="@+id/btHejJezu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hej Jezu!" />
+
+            <Button
+                android:id="@+id/btJakDobrze"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jak dobrze jest dziękować ci" />
+
+            <Button
+                android:id="@+id/btJegoMilosc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jego Miłość" />
+
+            <Button
+                android:id="@+id/btKazdyWschod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Każdy wschód słońca" />
+
+            <Button
+                android:id="@+id/btPanieTwaDobroc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Panie twa dobroć i łaska" />
+
+            <Button
+                android:id="@+id/btPozwolBy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pozwól by" />
+
+            <Button
+                android:id="@+id/btPrzyjdzJakDeszcz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Przyjdź jak Deszcz" />
+
+            <Button
+                android:id="@+id/btSandaly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sandały" />
+
+            <Button
+                android:id="@+id/btStojeDzis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stoję dziś" />
+
+            <Button
+                android:id="@+id/btToKrol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="To Król nasz pełen chwały" />
+
+            <Button
+                android:id="@+id/btWierzycJakPiotr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wierzyć jak Piotr" />
+
+            <Button
+                android:id="@+id/btWykrzykujcie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wykrzykujcie na Cześć Pana" />
+
+            <Button
+                android:id="@+id/btZiemia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ziemia" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
