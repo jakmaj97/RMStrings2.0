@@ -2,10 +2,6 @@ package myownrms.jakubmajchrzak.rmstrings2;
 
 import android.view.View;
 
-/**
- * Created by Jakub Majchrzak on 12.03.2018.
- */
-
 public class MySong {
     int iImage;
     int iMusic;

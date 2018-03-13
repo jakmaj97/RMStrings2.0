@@ -42,6 +42,24 @@
         android:layout_height="wrap_content"
         android:text="Wiolonczela" />
 
+    <Button
+        android:id="@+id/btTrmpt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trąbka I" />
+
+    <Button
+        android:id="@+id/btTrmpt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trąbka II" />
+
+    <Button
+        android:id="@+id/btSax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Saksofon" />
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="244dp" />

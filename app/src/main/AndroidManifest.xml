@@ -19,7 +19,10 @@
         <activity android:name=".Cello" />
         <activity android:name=".Violin" />
         <activity android:name=".ViolinII" />
-        <activity android:name=".Song"></activity>
+        <activity android:name=".Song" />
+        <activity android:name=".Trumpet" />
+        <activity android:name=".TrumpetII" />
+        <activity android:name=".Sax"></activity>
     </application>
 
 </manifest>

@@ -27,6 +27,7 @@ public class Violin extends AppCompatActivity {
 
         final Intent iSong = new Intent(this, Song.class);
         final Bundle myBundle = new Bundle();
+
         Button btWierzycJakPiotr = (Button) findViewById(R.id.btWierzycJakPiotr);
         btWierzycJakPiotr.setOnClickListener(new View.OnClickListener() {
             @Override

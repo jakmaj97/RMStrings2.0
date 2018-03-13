@@ -45,5 +45,29 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(iTurnOnCello);
             }
         });
+        final Intent iTurnOnTrumpet = new Intent(this, Trumpet.class);
+        Button btTurnOnTrumpet = (Button) findViewById(R.id.btTrmpt1);
+        btTurnOnTrumpet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(iTurnOnTrumpet);
+            }
+        });
+        final Intent iTurnOnTrumpetII = new Intent(this, TrumpetII.class);
+        Button btTurnOnTrumpetII = (Button) findViewById(R.id.btTrmpt2);
+        btTurnOnTrumpetII.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(iTurnOnTrumpetII);
+            }
+        });
+        final Intent iTurnOnSax = new Intent(this, Sax.class);
+        Button btTurnOnSax = (Button) findViewById(R.id.btSax);
+        btTurnOnSax.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(iTurnOnSax);
+            }
+        });
     }
 }
