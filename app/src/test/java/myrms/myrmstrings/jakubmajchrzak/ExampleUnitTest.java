@@ -1,4 +1,4 @@
-package myownrms.jakubmajchrzak.rmstrings2;
+package myrms.myrmstrings.jakubmajchrzak;
 
 import org.junit.Test;
 

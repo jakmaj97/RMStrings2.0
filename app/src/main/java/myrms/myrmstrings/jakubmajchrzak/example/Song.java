@@ -1,4 +1,4 @@
-package myownrms.jakubmajchrzak.rmstrings2;
+package myrms.myrmstrings.jakubmajchrzak.example;
 
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -15,6 +15,7 @@ import java.util.Map;
 
 import java.util.HashMap;
 
+import myrms.myrmstrings.jakubmajchrzak.example.R;
 import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class Song extends AppCompatActivity {

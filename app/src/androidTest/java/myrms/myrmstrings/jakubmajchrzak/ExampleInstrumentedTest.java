@@ -1,4 +1,4 @@
-package myownrms.jakubmajchrzak.rmstrings2;
+package myrms.myrmstrings.jakubmajchrzak;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("myownrms.jakubmajchrzak.rmstrings2", appContext.getPackageName());
+        assertEquals("myrms.myrmstrings.jakubmajchrzak", appContext.getPackageName());
     }
 }

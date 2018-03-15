@@ -1,4 +1,4 @@
-package myownrms.jakubmajchrzak.rmstrings2;
+package myrms.myrmstrings.jakubmajchrzak.example;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -9,6 +9,8 @@ import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.Button;
+
+import myrms.myrmstrings.jakubmajchrzak.example.R;
 
 public class MainActivity extends AppCompatActivity {
 

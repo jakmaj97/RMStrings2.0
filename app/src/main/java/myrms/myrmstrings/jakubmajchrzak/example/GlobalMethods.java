@@ -1,8 +1,10 @@
-package myownrms.jakubmajchrzak.rmstrings2;
+package myrms.myrmstrings.jakubmajchrzak.example;
 
 import android.content.Context;
 import android.view.View;
 import android.widget.Toast;
+
+import myrms.myrmstrings.jakubmajchrzak.example.R;
 
 public class GlobalMethods {
     Context contMyContext;

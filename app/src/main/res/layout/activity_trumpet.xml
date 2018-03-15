@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="myownrms.jakubmajchrzak.rmstrings2.Trumpet">
+    tools:context="myrms.myrmstrings.jakubmajchrzak.example.Trumpet">
 
     <TextView
         android:id="@+id/tvTrmpt"

@@ -1,6 +1,4 @@
-package myownrms.jakubmajchrzak.rmstrings2;
-
-import android.view.View;
+package myrms.myrmstrings.jakubmajchrzak.example;
 
 public class MySong {
     int iImage;
