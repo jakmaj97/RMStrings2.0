@@ -1,3 +1,176 @@
 <resources>
     <string name="app_name">RMStrings</string>
+    <string name="key">key</string>
+    <string name="noScoresComm">Brak nut do tego utworu :(</string>
+
+    <string-array name="wierzyc_jak_piotr_ids">
+        <item>wierzycJakPiotr1</item>
+        <item>wierzycJakPiotr2</item>
+        <item>wierzycJakPiotr3</item>
+        <item>wierzycJakPiotr4</item>
+        <item>wierzycJakPiotr5</item>
+        <item>wierzycJakPiotr6</item>
+    </string-array>
+
+    <string-array name="duszo_ma_ids">
+        <item>duszoMa1</item>
+        <item>duszoMa2</item>
+        <item>duszoMa3</item>
+        <item>duszoMa4</item>
+        <item>duszoMa5</item>
+        <item>duszoMa6</item>
+    </string-array>
+
+    <string-array name="genesis_ids">
+        <item>genesis1</item>
+        <item>genesis2</item>
+        <item>genesis3</item>
+        <item>genesis4</item>
+        <item>genesis5</item>
+        <item>genesis6</item>
+    </string-array>
+
+    <string-array name="hej_jezu_ids">
+        <item>hej1</item>
+        <item>hej2</item>
+        <item>hej3</item>
+        <item>hej4</item>
+        <item>hej5</item>
+        <item>hej6</item>
+    </string-array>
+
+    <string-array name="idz_i_glos_ids">
+        <item>idz1</item>
+        <item>idz2</item>
+        <item>idz3</item>
+        <item>idz4</item>
+        <item>idz5</item>
+        <item>idz6</item>
+    </string-array>
+
+    <string-array name="jak_dobrze_ids">
+        <item>jakDobrze1</item>
+        <item>jakDobrze2</item>
+        <item>jakDobrze3</item>
+        <item>jakDobrze4</item>
+        <item>jakDobrze5</item>
+        <item>jakDobrze6</item>
+    </string-array>
+
+    <string-array name="jego_milosc_ids">
+        <item>jegoMilosc1</item>
+        <item>jegoMilosc2</item>
+        <item>jegoMilosc3</item>
+        <item>jegoMilosc4</item>
+        <item>jegoMilosc5</item>
+        <item>jegoMilosc6</item>
+    </string-array>
+
+    <string-array name="kazdy_wschod_ids">
+        <item>kazdyWschod1</item>
+        <item>kazdyWschod2</item>
+        <item>kazdyWschod3</item>
+        <item>kazdyWschod4</item>
+        <item>kazdyWschod5</item>
+        <item>kazdyWschod6</item>
+    </string-array>
+
+    <string-array name="nadejdzie_dzien_ids">
+        <item>nadejdzie1</item>
+        <item>nadejdzie2</item>
+        <item>nadejdzie3</item>
+        <item>nadejdzie4</item>
+        <item>nadejdzie5</item>
+        <item>nadejdzie6</item>
+    </string-array>
+
+    <string-array name="panie_twa_dobroc_ids">
+        <item>panieTwaDobroc1</item>
+        <item>panieTwaDobroc2</item>
+        <item>panieTwaDobroc3</item>
+        <item>panieTwaDobroc4</item>
+        <item>panieTwaDobroc5</item>
+        <item>panieTwaDobroc6</item>
+    </string-array>
+
+    <string-array name="pozwol_by_ids">
+        <item>pozwol1</item>
+        <item>pozwol2</item>
+        <item>pozwol3</item>
+        <item>pozwol4</item>
+        <item>pozwol5</item>
+        <item>pozwol6</item>
+    </string-array>
+
+    <string-array name="przyjdz_jak_ids">
+        <item>przyjdz1</item>
+        <item>przyjdz2</item>
+        <item>przyjdz3</item>
+        <item>przyjdz4</item>
+        <item>przyjdz5</item>
+        <item>przyjdz6</item>
+    </string-array>
+
+    <string-array name="stoje_dzis_ids">
+        <item>stoje1</item>
+        <item>stoje2</item>
+        <item>stoje3</item>
+        <item>stoje4</item>
+        <item>stoje5</item>
+        <item>stoje6</item>
+    </string-array>
+
+    <string-array name="sandaly_ids">
+        <item>sandaly1</item>
+        <item>sandaly2</item>
+        <item>sandaly3</item>
+        <item>sandaly4</item>
+        <item>sandaly5</item>
+        <item>sandaly6</item>
+    </string-array>
+
+    <string-array name="to_krol_ids">
+        <item>toKrol1</item>
+        <item>toKrol2</item>
+        <item>toKrol3</item>
+        <item>toKrol4</item>
+        <item>toKrol5</item>
+        <item>toKrol6</item>
+    </string-array>
+
+    <string-array name="uwielbiamy_cie_ids">
+        <item>uwielbiamy1</item>
+        <item>uwielbiamy2</item>
+        <item>uwielbiamy3</item>
+        <item>uwielbiamy4</item>
+        <item>uwielbiamy5</item>
+        <item>uwielbiamy6</item>
+    </string-array>
+
+    <string-array name="wykrzykujcie_ids">
+        <item>wykrz1</item>
+        <item>wykrz2</item>
+        <item>wykrz3</item>
+        <item>wykrz4</item>
+        <item>wykrz5</item>
+        <item>wykrz6</item>
+    </string-array>
+
+    <string-array name="zbawca_ids">
+        <item>zbawca1</item>
+        <item>zbawca2</item>
+        <item>zbawca3</item>
+        <item>zbawca4</item>
+        <item>zbawca5</item>
+        <item>zbawca6</item>
+    </string-array>
+
+    <string-array name="ziemia_ids">
+        <item>ziemia1</item>
+        <item>ziemia2</item>
+        <item>ziemia3</item>
+        <item>ziemia4</item>
+        <item>ziemia5</item>
+        <item>ziemia6</item>
+    </string-array>
 </resources>

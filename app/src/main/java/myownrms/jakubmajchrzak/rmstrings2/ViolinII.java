@@ -32,7 +32,7 @@ public class ViolinII extends AppCompatActivity {
         btWierzycJakPiotr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString("key", "wierzycJakPiotr2");
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[1]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -41,7 +41,7 @@ public class ViolinII extends AppCompatActivity {
         btDuszoMa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString("key", "duszoMa2");
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.duszo_ma_ids)[1]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -50,7 +50,7 @@ public class ViolinII extends AppCompatActivity {
         btGenesis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString("key", "genesis2");
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.genesis_ids)[1]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -59,7 +59,7 @@ public class ViolinII extends AppCompatActivity {
         btHejJezu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString("key", "hej2");
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.hej_jezu_ids)[1]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -68,7 +68,7 @@ public class ViolinII extends AppCompatActivity {
         btJakDobrze.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString("key", "jakDobrze2");
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.jak_dobrze_ids)[1]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -77,7 +77,7 @@ public class ViolinII extends AppCompatActivity {
         btJegoMilosc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString("key", "jegoMilosc2");
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.jego_milosc_ids)[1]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -86,7 +86,7 @@ public class ViolinII extends AppCompatActivity {
         btKazdyWschod.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString("key", "kazdyWschod1");
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.kazdy_wschod_ids)[0]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -95,7 +95,7 @@ public class ViolinII extends AppCompatActivity {
         btPanieTwaDobroc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString("key", "panieTwaDobroc2");
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.panie_twa_dobroc_ids)[1]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -104,7 +104,7 @@ public class ViolinII extends AppCompatActivity {
         btPozwolBy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString("key", "pozwol2");
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.pozwol_by_ids)[1]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -113,7 +113,7 @@ public class ViolinII extends AppCompatActivity {
         btPrzyjdz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString("key", "przyjdz2");
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.przyjdz_jak_ids)[1]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -122,7 +122,7 @@ public class ViolinII extends AppCompatActivity {
         btSandaly.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString("key", "sandaly2");
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.sandaly_ids)[1]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -131,7 +131,7 @@ public class ViolinII extends AppCompatActivity {
         btStoje.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString("key", "stoje2");
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.stoje_dzis_ids)[1]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -140,7 +140,7 @@ public class ViolinII extends AppCompatActivity {
         btToKrol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString("key", "toKrol2");
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.to_krol_ids)[1]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -149,7 +149,7 @@ public class ViolinII extends AppCompatActivity {
         btWykrzykujcie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString("key", "wykrz2");
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.wykrzykujcie_ids)[1]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -158,7 +158,7 @@ public class ViolinII extends AppCompatActivity {
         btZiemia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString("key", "ziemia2");
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.ziemia_ids)[1]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }

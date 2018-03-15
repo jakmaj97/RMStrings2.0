@@ -11,7 +11,7 @@
         android:id="@+id/tvTrmptII"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Trąbka I" />
+        android:text="Trąbka II" />
 
     <Space
         android:layout_width="match_parent"
