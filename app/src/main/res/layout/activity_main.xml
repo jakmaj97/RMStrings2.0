@@ -16,7 +16,7 @@
         android:id="@+id/tvCHooseInstr"
         android:layout_width="match_parent"
         android:layout_height="41dp"
-        android:text="Wybierz instrument"
+        android:text="@string/choose_instrument_comm"
         android:gravity="center"
         android:textSize="30dp"/>
 
@@ -28,37 +28,37 @@
         android:id="@+id/btViol1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Skrzypce I" />
+        android:text="@string/viol1" />
 
     <Button
         android:id="@+id/btViol2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Skrzypce II" />
+        android:text="@string/viol2" />
 
     <Button
         android:id="@+id/btCello"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Wiolonczela" />
+        android:text="@string/cello" />
 
     <Button
         android:id="@+id/btTrmpt1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Trąbka I" />
+        android:text="@string/trumpet1" />
 
     <Button
         android:id="@+id/btTrmpt2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Trąbka II" />
+        android:text="@string/trumpet2" />
 
     <Button
         android:id="@+id/btSax"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Saksofon" />
+        android:text="@string/sax" />
 
     <Space
         android:layout_width="match_parent"

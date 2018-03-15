@@ -1,7 +1,36 @@
 <resources>
     <string name="app_name">RMStrings</string>
     <string name="key">key</string>
-    <string name="noScoresComm">Brak nut do tego utworu :(</string>
+    <string name="no_scores_comm">Brak nut do tego utworu :(</string>
+    <string name="choose_instrument_comm">Wybierz Instrument</string>
+    <string name="choose_song_comm">Wybierz Utwór</string>
+
+    <string name="viol1">Skrzypce I</string>
+    <string name="viol2">Skrzypce II</string>
+    <string name="cello">Wiolonczela</string>
+    <string name="trumpet1">Trąbka I</string>
+    <string name="trumpet2">Trąbka II</string>
+    <string name="sax">Saksofon</string>
+
+    <string name="duszo_ma">Duszo ma Pana chwal</string>
+    <string name="genesis">Genesis</string>
+    <string name="hej_jezu">Hej Jezu, Królem Tyś!</string>
+    <string name="idz">Idź i Głoś</string>
+    <string name="jak_dobrze">Jak dobrze jest dziękować Ci</string>
+    <string name="jego_milosc">Jego Miłość</string>
+    <string name="kazdy_wschod">Każdy wschód słońca</string>
+    <string name="nadejdzie_dzien">Nadejdzie dzień</string>
+    <string name="panie_twa">Panie Twa Dobroć i łaska</string>
+    <string name="pozwol_by">Pozwól by</string>
+    <string name="przyjdz_jak">Przyjdź jak deszcz</string>
+    <string name="sandaly">Sandały</string>
+    <string name="stoje_dzis">Stoję dziś</string>
+    <string name="to_krol">To Król nasz pełen chwały</string>
+    <string name="uwielbiamy">Uwielbiamy Cię</string>
+    <string name="wierzyc_jak">Wierzyć jak Piotr</string>
+    <string name="wykrzykujcie">Wykrzykujcie na cześć Pana</string>
+    <string name="zbawca">Zbawca</string>
+    <string name="ziemia">Ziemia</string>
 
     <string-array name="wierzyc_jak_piotr_ids">
         <item>wierzycJakPiotr1</item>

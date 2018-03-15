@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Wybierz utwór"
+        android:text="@string/choose_song_comm"
         android:textSize="30dp" />
 
     <Space
@@ -43,79 +43,79 @@
                 android:id="@+id/btDuszoMaPanaChwal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Duszo ma pana chwal" />
+                android:text="@string/duszo_ma" />
 
             <Button
                 android:id="@+id/btGenesis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Genesis" />
+                android:text="@string/genesis" />
 
             <Button
                 android:id="@+id/btHejJezu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hej Jezu!" />
+                android:text="@string/hej_jezu" />
 
             <Button
                 android:id="@+id/btJakDobrze"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Jak dobrze jest dziękować ci" />
+                android:text="@string/jak_dobrze" />
 
             <Button
                 android:id="@+id/btJegoMilosc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Jego Miłość" />
+                android:text="@string/jego_milosc" />
 
             <Button
                 android:id="@+id/btKazdyWschod"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Każdy wschód słońca" />
+                android:text="@string/kazdy_wschod" />
 
             <Button
                 android:id="@+id/btPanieTwaDobroc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Panie twa dobroć i łaska" />
+                android:text="@string/panie_twa" />
 
             <Button
                 android:id="@+id/btPozwolBy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Pozwól by" />
+                android:text="@string/pozwol_by" />
 
             <Button
                 android:id="@+id/btPrzyjdzJakDeszcz"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Przyjdź jak Deszcz" />
+                android:text="@string/przyjdz_jak" />
 
             <Button
                 android:id="@+id/btSandaly"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sandały" />
+                android:text="@string/sandaly" />
 
             <Button
                 android:id="@+id/btStojeDzis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Stoję dziś" />
+                android:text="@string/stoje_dzis" />
 
             <Button
                 android:id="@+id/btToKrol"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="To Król nasz pełen chwały" />
+                android:text="@string/to_krol" />
 
             <Button
                 android:id="@+id/btWierzycJakPiotr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Wierzyć jak Piotr" />
+                android:text="@string/wierzyc_jak" />
 
             <Button
                 android:id="@+id/btWykrzykujcie"
@@ -127,7 +127,7 @@
                 android:id="@+id/btZiemia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ziemia" />
+                android:text="@string/ziemia" />
 
         </LinearLayout>
     </ScrollView>

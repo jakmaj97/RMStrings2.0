@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="violin_1_id">0</integer>
+    <integer name="violin_2_id">1</integer>
+    <integer name="cello_id">2</integer>
+    <integer name="trumpet_1_id">3</integer>
+    <integer name="trumpet_2_id">4</integer>
+    <integer name="sax_id">5</integer>
+
+    <integer name="song_start_point">0</integer>
+</resources>

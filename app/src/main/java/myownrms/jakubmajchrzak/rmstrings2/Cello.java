@@ -14,10 +14,14 @@ import android.widget.Toast;
 
 public class Cello extends AppCompatActivity {
 
+    GlobalMethods gbMyGlobals;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cello);
+
+        gbMyGlobals = new GlobalMethods(getApplicationContext());
 
         SpannableString s = new SpannableString(getTitle());
         s.setSpan(new ForegroundColorSpan(Color.BLACK), 0, getTitle().length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -33,7 +37,7 @@ public class Cello extends AppCompatActivity {
         btWierzycJakPiotr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[2]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[getResources().getInteger(R.integer.cello_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -42,7 +46,7 @@ public class Cello extends AppCompatActivity {
         btDuszoMa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.duszo_ma_ids)[2]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.duszo_ma_ids)[getResources().getInteger(R.integer.cello_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -51,7 +55,7 @@ public class Cello extends AppCompatActivity {
         btGenesis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.genesis_ids)[2]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.genesis_ids)[getResources().getInteger(R.integer.cello_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -60,7 +64,7 @@ public class Cello extends AppCompatActivity {
         btHejJezu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.hej_jezu_ids)[2]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.hej_jezu_ids)[getResources().getInteger(R.integer.cello_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -69,7 +73,7 @@ public class Cello extends AppCompatActivity {
         btJakDobrze.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.jak_dobrze_ids)[2]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.jak_dobrze_ids)[getResources().getInteger(R.integer.cello_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -78,7 +82,7 @@ public class Cello extends AppCompatActivity {
         btJegoMilosc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.jego_milosc_ids)[2]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.jego_milosc_ids)[getResources().getInteger(R.integer.cello_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -87,14 +91,15 @@ public class Cello extends AppCompatActivity {
         btKazdyWschod.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                vEmptySongToast();
+                gbMyGlobals.vEmptySongToast();
             }
         });
+
         Button btPanieTwaDobroc= (Button) findViewById(R.id.btPanieTwaDobroc);
         btPanieTwaDobroc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.panie_twa_dobroc_ids)[2]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.panie_twa_dobroc_ids)[getResources().getInteger(R.integer.cello_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -103,7 +108,7 @@ public class Cello extends AppCompatActivity {
         btPozwolBy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.pozwol_by_ids)[2]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.pozwol_by_ids)[getResources().getInteger(R.integer.cello_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -112,7 +117,7 @@ public class Cello extends AppCompatActivity {
         btPrzyjdz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.przyjdz_jak_ids)[2]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.przyjdz_jak_ids)[getResources().getInteger(R.integer.cello_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -121,7 +126,7 @@ public class Cello extends AppCompatActivity {
         btSandaly.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.sandaly_ids)[2]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.sandaly_ids)[getResources().getInteger(R.integer.cello_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -130,7 +135,7 @@ public class Cello extends AppCompatActivity {
         btStoje.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.stoje_dzis_ids)[2]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.stoje_dzis_ids)[getResources().getInteger(R.integer.cello_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -139,7 +144,7 @@ public class Cello extends AppCompatActivity {
         btToKrol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.to_krol_ids)[2]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.to_krol_ids)[getResources().getInteger(R.integer.cello_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -148,7 +153,7 @@ public class Cello extends AppCompatActivity {
         btWykrzykujcie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.wykrzykujcie_ids)[2]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.wykrzykujcie_ids)[getResources().getInteger(R.integer.cello_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -157,7 +162,7 @@ public class Cello extends AppCompatActivity {
         btZiemia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.ziemia_ids)[2]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.ziemia_ids)[getResources().getInteger(R.integer.cello_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -169,11 +174,5 @@ public class Cello extends AppCompatActivity {
         if(item.getItemId()== android.R.id.home)
             finish();
         return super.onOptionsItemSelected(item);
-    }
-    public void vEmptySongToast() {
-        Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.noScoresComm), Toast.LENGTH_SHORT);
-        View view = toast.getView();
-        view.setBackgroundResource(R.color.colorPrimary);
-        toast.show();
     }
 }

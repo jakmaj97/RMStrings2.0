@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Wybierz utwór"
+        android:text="@string/choose_song_comm"
         android:textSize="30dp" />
 
     <Space
@@ -42,85 +42,85 @@
                 android:id="@+id/btDuszoMaPanaChwal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Duszo ma pana chwal" />
+                android:text="@string/duszo_ma" />
 
             <Button
                 android:id="@+id/btGenesis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Genesis" />
+                android:text="@string/genesis" />
 
             <Button
                 android:id="@+id/btHejJezu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hej Jezu!" />
+                android:text="@string/hej_jezu" />
 
             <Button
                 android:id="@+id/btIdz"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Idź i Głoś" />
+                android:text="@string/idz" />
 
             <Button
                 android:id="@+id/btJakDobrze"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Jak dobrze jest dziękować ci" />
+                android:text="@string/jak_dobrze" />
 
             <Button
                 android:id="@+id/btKazdyWschod"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Każdy wschód słońca" />
+                android:text="@string/kazdy_wschod" />
 
             <Button
                 android:id="@+id/btNadejdzie"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nadejdzie dzień" />
+                android:text="@string/nadejdzie_dzien" />
 
             <Button
                 android:id="@+id/btPanieTwaDobroc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Panie twa dobroć i łaska" />
+                android:text="@string/panie_twa" />
 
             <Button
                 android:id="@+id/btPrzyjdzJakDeszcz"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Przyjdź jak Deszcz" />
+                android:text="@string/przyjdz_jak" />
 
             <Button
                 android:id="@+id/btSandaly"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sandały" />
+                android:text="@string/sandaly" />
 
             <Button
                 android:id="@+id/btStojeDzis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Stoję dziś" />
+                android:text="@string/stoje_dzis" />
 
             <Button
                 android:id="@+id/btToKrol"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="To Król nasz pełen chwały" />
+                android:text="@string/to_krol" />
 
             <Button
                 android:id="@+id/btUWielbiamy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Uwielbiamy Cię" />
+                android:text="@string/uwielbiamy" />
 
             <Button
                 android:id="@+id/btWierzycJakPiotr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Wierzyć jak Piotr" />
+                android:text="@string/wierzyc_jak" />
 
             <Button
                 android:id="@+id/btWykrzykujcie"
@@ -132,13 +132,13 @@
                 android:id="@+id/btZbawca"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Zbawca" />
+                android:text="@string/zbawca" />
 
             <Button
                 android:id="@+id/btZiemia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ziemia" />
+                android:text="@string/ziemia" />
 
         </LinearLayout>
     </ScrollView>

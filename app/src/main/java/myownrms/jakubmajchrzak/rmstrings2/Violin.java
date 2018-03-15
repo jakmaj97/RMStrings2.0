@@ -13,10 +13,14 @@ import android.widget.Button;
 
 public class Violin extends AppCompatActivity {
 
+    GlobalMethods gbMyGlobals;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_violin);
+
+        gbMyGlobals = new GlobalMethods(getApplicationContext());
 
         SpannableString s = new SpannableString(getTitle());
         s.setSpan(new ForegroundColorSpan(Color.BLACK), 0, getTitle().length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -32,7 +36,7 @@ public class Violin extends AppCompatActivity {
         btWierzycJakPiotr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[0]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[getResources().getInteger(R.integer.violin_1_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -41,7 +45,7 @@ public class Violin extends AppCompatActivity {
         btDuszoMa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.duszo_ma_ids)[0]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.duszo_ma_ids)[getResources().getInteger(R.integer.violin_1_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -50,7 +54,7 @@ public class Violin extends AppCompatActivity {
         btGenesis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.genesis_ids)[0]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.genesis_ids)[getResources().getInteger(R.integer.violin_1_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -59,7 +63,7 @@ public class Violin extends AppCompatActivity {
         btHejJezu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.hej_jezu_ids)[0]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.hej_jezu_ids)[getResources().getInteger(R.integer.violin_1_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -68,7 +72,7 @@ public class Violin extends AppCompatActivity {
         btJakDobrze.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.jak_dobrze_ids)[0]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.jak_dobrze_ids)[getResources().getInteger(R.integer.violin_1_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -77,7 +81,7 @@ public class Violin extends AppCompatActivity {
         btJegoMilosc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.jego_milosc_ids)[0]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.jego_milosc_ids)[getResources().getInteger(R.integer.violin_1_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -86,7 +90,7 @@ public class Violin extends AppCompatActivity {
         btKazdyWschod.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.jego_milosc_ids)[0]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.kazdy_wschod_ids)[getResources().getInteger(R.integer.violin_1_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -95,7 +99,7 @@ public class Violin extends AppCompatActivity {
         btPanieTwaDobroc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.jego_milosc_ids)[0]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.panie_twa_dobroc_ids)[getResources().getInteger(R.integer.violin_1_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -104,7 +108,7 @@ public class Violin extends AppCompatActivity {
         btPozwolBy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.pozwol_by_ids)[0]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.pozwol_by_ids)[getResources().getInteger(R.integer.violin_1_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -113,7 +117,7 @@ public class Violin extends AppCompatActivity {
         btPrzyjdz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.przyjdz_jak_ids)[0]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.przyjdz_jak_ids)[getResources().getInteger(R.integer.violin_1_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -122,7 +126,7 @@ public class Violin extends AppCompatActivity {
         btSandaly.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.sandaly_ids)[0]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.sandaly_ids)[getResources().getInteger(R.integer.violin_1_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -131,7 +135,7 @@ public class Violin extends AppCompatActivity {
         btStoje.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.stoje_dzis_ids)[0]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.stoje_dzis_ids)[getResources().getInteger(R.integer.violin_1_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -140,7 +144,7 @@ public class Violin extends AppCompatActivity {
         btToKrol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.to_krol_ids)[0]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.to_krol_ids)[getResources().getInteger(R.integer.violin_1_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -149,7 +153,7 @@ public class Violin extends AppCompatActivity {
         btWykrzykujcie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.wykrzykujcie_ids)[0]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.wykrzykujcie_ids)[getResources().getInteger(R.integer.violin_1_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
@@ -158,7 +162,7 @@ public class Violin extends AppCompatActivity {
         btZiemia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.ziemia_ids)[0]);
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.ziemia_ids)[getResources().getInteger(R.integer.violin_1_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
