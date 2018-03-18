@@ -15,7 +15,6 @@
             android:id="@+id/imageView3"
             android:layout_width="match_parent"
             android:layout_height="452dp"
-            app:srcCompat="@drawable/ic_launcher_background"
             tools:layout_editor_absoluteX="137dp"
             tools:layout_editor_absoluteY="259dp" />
 

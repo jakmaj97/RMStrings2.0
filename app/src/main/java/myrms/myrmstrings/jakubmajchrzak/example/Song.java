@@ -93,12 +93,12 @@ public class Song extends AppCompatActivity {
     }
     Map mpFillMap(Map<String, MySong> mpMap) {
 
-        mpMap.put(getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[getResources().getInteger(R.integer.violin_1_id)], new MySong(R.drawable.wierzyc_jak_piotr_viol1, R.raw.wierzyc_jak_piotr_v1));
-        mpMap.put(getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[getResources().getInteger(R.integer.violin_2_id)], new MySong(R.drawable.wierzyc_jak_piotr_viol2, R.raw.wierzyc_jak_piotr_v2));
-        mpMap.put(getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[getResources().getInteger(R.integer.cello_id)], new MySong(R.drawable.wierzyc_jak_piotr_cello, R.raw.wierzyc_jak_piotr_c));
-        mpMap.put(getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[getResources().getInteger(R.integer.trumpet_1_id)], new MySong(R.drawable.wierzyc_jak_piotr_tt, R.raw.wierzyc_jak_tt));
-        mpMap.put(getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[getResources().getInteger(R.integer.trumpet_2_id)], new MySong(R.drawable.wierzyc_jak_piotr_tt, R.raw.wierzyc_jak_tt));
-        mpMap.put(getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[getResources().getInteger(R.integer.sax_id)], new MySong(R.drawable.wierzyc_jak_piotr_s, R.raw.wierzyc_jak_s));
+        mpMap.put(getResources().getStringArray(R.array.czcijmy_ids)[getResources().getInteger(R.integer.violin_1_id)], new MySong(R.drawable.czcijmy_v1, R.raw.czcijmy_v1));
+        mpMap.put(getResources().getStringArray(R.array.czcijmy_ids)[getResources().getInteger(R.integer.violin_2_id)], new MySong(R.drawable.czcijmy_v2, R.raw.czcijmy_v2));
+        mpMap.put(getResources().getStringArray(R.array.czcijmy_ids)[getResources().getInteger(R.integer.cello_id)], new MySong(R.drawable.czcijmy_c, R.raw.czcijmy_c));
+        mpMap.put(getResources().getStringArray(R.array.czcijmy_ids)[getResources().getInteger(R.integer.trumpet_1_id)], new MySong(R.drawable.czcijmy_t1, R.raw.czcijmy_t1));
+        mpMap.put(getResources().getStringArray(R.array.czcijmy_ids)[getResources().getInteger(R.integer.trumpet_2_id)], new MySong(R.drawable.czcijmy_t2, R.raw.czcijmy_t2));
+        mpMap.put(getResources().getStringArray(R.array.czcijmy_ids)[getResources().getInteger(R.integer.sax_id)], new MySong(R.drawable.czcijmy_s, R.raw.czcijmy_s));
 
         mpMap.put(getResources().getStringArray(R.array.duszo_ma_ids)[getResources().getInteger(R.integer.violin_1_id)], new MySong(R.drawable.duszo_ma_v1, R.raw.duszo_ma_v1m));
         mpMap.put(getResources().getStringArray(R.array.duszo_ma_ids)[getResources().getInteger(R.integer.violin_2_id)], new MySong(R.drawable.duszo_ma_v2, R.raw.duszo_ma_v2m));
@@ -177,6 +177,13 @@ public class Song extends AppCompatActivity {
         mpMap.put(getResources().getStringArray(R.array.sandaly_ids)[getResources().getInteger(R.integer.trumpet_2_id)], new MySong(R.drawable.sandaly_tt, R.raw.sandaly_tt));
         mpMap.put(getResources().getStringArray(R.array.sandaly_ids)[getResources().getInteger(R.integer.sax_id)], new MySong(R.drawable.sandaly_s, R.raw.sandaly_s));
 
+        mpMap.put(getResources().getStringArray(R.array.schowaj_ids)[getResources().getInteger(R.integer.violin_1_id)], new MySong(R.drawable.schowaj_v1, R.raw.schowaj_v1));
+        mpMap.put(getResources().getStringArray(R.array.schowaj_ids)[getResources().getInteger(R.integer.violin_2_id)], new MySong(R.drawable.schowaj_v2, R.raw.schowaj_v2));
+        mpMap.put(getResources().getStringArray(R.array.schowaj_ids)[getResources().getInteger(R.integer.cello_id)], new MySong(R.drawable.schowaj_c, R.raw.schowaj_c));
+        mpMap.put(getResources().getStringArray(R.array.schowaj_ids)[getResources().getInteger(R.integer.trumpet_1_id)], new MySong(R.drawable.schowaj_tt, R.raw.schowaj_tts));
+        mpMap.put(getResources().getStringArray(R.array.schowaj_ids)[getResources().getInteger(R.integer.trumpet_2_id)], new MySong(R.drawable.schowaj_tt, R.raw.schowaj_tts));
+        mpMap.put(getResources().getStringArray(R.array.schowaj_ids)[getResources().getInteger(R.integer.sax_id)], new MySong(R.drawable.schowaj_s, R.raw.schowaj_tts));
+
         mpMap.put(getResources().getStringArray(R.array.to_krol_ids)[getResources().getInteger(R.integer.violin_1_id)], new MySong(R.drawable.to_krol_v1, R.raw.to_krol_v));
         mpMap.put(getResources().getStringArray(R.array.to_krol_ids)[getResources().getInteger(R.integer.violin_2_id)], new MySong(R.drawable.to_krol_v2, R.raw.to_krol_v));
         mpMap.put(getResources().getStringArray(R.array.to_krol_ids)[getResources().getInteger(R.integer.cello_id)], new MySong(R.drawable.to_krol_c, R.raw.to_krol_c));
@@ -187,6 +194,13 @@ public class Song extends AppCompatActivity {
         mpMap.put(getResources().getStringArray(R.array.uwielbiamy_cie_ids)[getResources().getInteger(R.integer.trumpet_1_id)], new MySong(R.drawable.uwielbiamy_tt, R.raw.uwielbiamy_cie_tt));
         mpMap.put(getResources().getStringArray(R.array.uwielbiamy_cie_ids)[getResources().getInteger(R.integer.trumpet_2_id)], new MySong(R.drawable.uwielbiamy_tt, R.raw.uwielbiamy_cie_tt));
         mpMap.put(getResources().getStringArray(R.array.uwielbiamy_cie_ids)[getResources().getInteger(R.integer.sax_id)], new MySong(R.drawable.uwielbiamy_s, R.raw.uwielbiamy_cie_s));
+
+        mpMap.put(getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[getResources().getInteger(R.integer.violin_1_id)], new MySong(R.drawable.wierzyc_jak_piotr_viol1, R.raw.wierzyc_jak_piotr_v1));
+        mpMap.put(getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[getResources().getInteger(R.integer.violin_2_id)], new MySong(R.drawable.wierzyc_jak_piotr_viol2, R.raw.wierzyc_jak_piotr_v2));
+        mpMap.put(getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[getResources().getInteger(R.integer.cello_id)], new MySong(R.drawable.wierzyc_jak_piotr_cello, R.raw.wierzyc_jak_piotr_c));
+        mpMap.put(getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[getResources().getInteger(R.integer.trumpet_1_id)], new MySong(R.drawable.wierzyc_jak_piotr_tt, R.raw.wierzyc_jak_tt));
+        mpMap.put(getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[getResources().getInteger(R.integer.trumpet_2_id)], new MySong(R.drawable.wierzyc_jak_piotr_tt, R.raw.wierzyc_jak_tt));
+        mpMap.put(getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[getResources().getInteger(R.integer.sax_id)], new MySong(R.drawable.wierzyc_jak_piotr_s, R.raw.wierzyc_jak_s));
 
         mpMap.put(getResources().getStringArray(R.array.wykrzykujcie_ids)[getResources().getInteger(R.integer.violin_1_id)], new MySong(R.drawable.wykrzykujcie_v1, R.raw.wykrzykujcie_v1));
         mpMap.put(getResources().getStringArray(R.array.wykrzykujcie_ids)[getResources().getInteger(R.integer.violin_2_id)], new MySong(R.drawable.wykrzykujcie_v2, R.raw.wykrzykujcie_v2));

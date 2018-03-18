@@ -34,16 +34,34 @@ public class Sax extends AppCompatActivity {
         final Intent iSong = new Intent(this, Song.class);
         final Bundle myBundle = new Bundle();
 
+        Button btCzcijmy = (Button) findViewById(R.id.btCzcijmy);
+        Button btDuszoMa = (Button) findViewById(R.id.btDuszoMaPanaChwal);
+        Button btGenesis = (Button) findViewById(R.id.btGenesis);
+        Button btIdz = (Button) findViewById(R.id.btIdz);
+        Button btHejJezu = (Button) findViewById(R.id.btHejJezu);
+        Button btJakDobrze = (Button) findViewById(R.id.btJakDobrze);
+        Button btKazdyWschod = (Button) findViewById(R.id.btKazdyWschod);
+        Button btNadejdzie = (Button) findViewById(R.id.btNadejdzie);
+        Button btPanieTwaDobroc= (Button) findViewById(R.id.btPanieTwaDobroc);
+        Button btPrzyjdz = (Button) findViewById(R.id.btPrzyjdzJakDeszcz);
+        Button btSandaly = (Button) findViewById(R.id.btSandaly);
+        Button btSchowaj = (Button) findViewById(R.id.btSchowaj);
+        Button btStoje = (Button) findViewById(R.id.btStojeDzis);
+        Button btToKrol = (Button) findViewById(R.id.btToKrol);
+        Button btUwielbiamy = (Button) findViewById(R.id.btUWielbiamy);
         Button btWierzycJakPiotr = (Button) findViewById(R.id.btWierzycJakPiotr);
-        btWierzycJakPiotr.setOnClickListener(new View.OnClickListener() {
+        Button btWykrzykujcie = (Button) findViewById(R.id.btWykrzykujcie);
+        Button btZbawca = (Button) findViewById(R.id.btZbawca);
+        Button btZiemia = (Button) findViewById(R.id.btZiemia);
+
+        btCzcijmy.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[getResources().getInteger(R.integer.sax_id)]);
+            public void onClick(View v) {
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.czcijmy_ids)[getResources().getInteger(R.integer.sax_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
         });
-        Button btDuszoMa = (Button) findViewById(R.id.btDuszoMaPanaChwal);
         btDuszoMa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,7 +70,6 @@ public class Sax extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btGenesis = (Button) findViewById(R.id.btGenesis);
         btGenesis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,7 +78,6 @@ public class Sax extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btIdz = (Button) findViewById(R.id.btIdz);
         btIdz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,7 +86,6 @@ public class Sax extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btHejJezu = (Button) findViewById(R.id.btHejJezu);
         btHejJezu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,7 +94,6 @@ public class Sax extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btJakDobrze = (Button) findViewById(R.id.btJakDobrze);
         btJakDobrze.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -88,7 +102,6 @@ public class Sax extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btNadejdzie = (Button) findViewById(R.id.btNadejdzie);
         btNadejdzie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,7 +110,6 @@ public class Sax extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btKazdyWschod = (Button) findViewById(R.id.btKazdyWschod);
         btKazdyWschod.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -106,7 +118,6 @@ public class Sax extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btPanieTwaDobroc= (Button) findViewById(R.id.btPanieTwaDobroc);
         btPanieTwaDobroc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -115,7 +126,6 @@ public class Sax extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btPrzyjdz = (Button) findViewById(R.id.btPrzyjdzJakDeszcz);
         btPrzyjdz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -124,7 +134,6 @@ public class Sax extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btSandaly = (Button) findViewById(R.id.btSandaly);
         btSandaly.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -133,7 +142,14 @@ public class Sax extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btStoje = (Button) findViewById(R.id.btStojeDzis);
+        btSchowaj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.schowaj_ids)[getResources().getInteger(R.integer.sax_id)]);
+                iSong.putExtras(myBundle);
+                startActivity(iSong, myBundle);
+            }
+        });
         btStoje.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -142,16 +158,6 @@ public class Sax extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btUwielbiamy = (Button) findViewById(R.id.btUWielbiamy);
-        btUwielbiamy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.uwielbiamy_cie_ids)[getResources().getInteger(R.integer.sax_id)]);
-                iSong.putExtras(myBundle);
-                startActivity(iSong, myBundle);
-            }
-        });
-        Button btToKrol = (Button) findViewById(R.id.btToKrol);
         btToKrol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -160,13 +166,27 @@ public class Sax extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btWykrzykujcie = (Button) findViewById(R.id.btWykrzykujcie);
+        btUwielbiamy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.uwielbiamy_cie_ids)[getResources().getInteger(R.integer.sax_id)]);
+                iSong.putExtras(myBundle);
+                startActivity(iSong, myBundle);
+            }
+        });
+        btWierzycJakPiotr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[getResources().getInteger(R.integer.sax_id)]);
+                iSong.putExtras(myBundle);
+                startActivity(iSong, myBundle);
+            }
+        });
         btWykrzykujcie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 gbMyGlobals.vEmptySongToast();}
         });
-        Button btZbawca = (Button) findViewById(R.id.btZbawca);
         btZbawca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -175,7 +195,6 @@ public class Sax extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btZiemia = (Button) findViewById(R.id.btZiemia);
         btZiemia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

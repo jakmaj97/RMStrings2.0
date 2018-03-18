@@ -34,16 +34,32 @@ public class ViolinII extends AppCompatActivity {
         final Intent iSong = new Intent(this, Song.class);
         final Bundle myBundle = new Bundle();
 
+        Button btCzcijmy = (Button) findViewById(R.id.btCzcijmy);
+        Button btDuszoMa = (Button) findViewById(R.id.btDuszoMaPanaChwal);
+        Button btGenesis = (Button) findViewById(R.id.btGenesis);
+        Button btHejJezu = (Button) findViewById(R.id.btHejJezu);
+        Button btJakDobrze = (Button) findViewById(R.id.btJakDobrze);
+        Button btJegoMilosc = (Button) findViewById(R.id.btJegoMilosc);
+        Button btKazdyWschod = (Button) findViewById(R.id.btKazdyWschod);
+        Button btPanieTwaDobroc= (Button) findViewById(R.id.btPanieTwaDobroc);
+        Button btPozwolBy = (Button) findViewById(R.id.btPozwolBy);
+        Button btPrzyjdz = (Button) findViewById(R.id.btPrzyjdzJakDeszcz);
+        Button btSandaly = (Button) findViewById(R.id.btSandaly);
+        Button btSchowaj = (Button) findViewById(R.id.btSchowaj);
+        Button btStoje = (Button) findViewById(R.id.btStojeDzis);
+        Button btToKrol = (Button) findViewById(R.id.btToKrol);
         Button btWierzycJakPiotr = (Button) findViewById(R.id.btWierzycJakPiotr);
-        btWierzycJakPiotr.setOnClickListener(new View.OnClickListener() {
+        Button btWykrzykujcie = (Button) findViewById(R.id.btWykrzykujcie);
+        Button btZiemia = (Button) findViewById(R.id.btZiemia);
+
+        btCzcijmy.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[getResources().getInteger(R.integer.violin_2_id)]);
+            public void onClick(View v) {
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.czcijmy_ids)[getResources().getInteger(R.integer.violin_2_id)]);
                 iSong.putExtras(myBundle);
                 startActivity(iSong, myBundle);
             }
         });
-        Button btDuszoMa = (Button) findViewById(R.id.btDuszoMaPanaChwal);
         btDuszoMa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,7 +68,6 @@ public class ViolinII extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btGenesis = (Button) findViewById(R.id.btGenesis);
         btGenesis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,7 +76,6 @@ public class ViolinII extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btHejJezu = (Button) findViewById(R.id.btHejJezu);
         btHejJezu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,7 +84,6 @@ public class ViolinII extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btJakDobrze = (Button) findViewById(R.id.btJakDobrze);
         btJakDobrze.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,7 +92,6 @@ public class ViolinII extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btJegoMilosc = (Button) findViewById(R.id.btJegoMilosc);
         btJegoMilosc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -88,7 +100,6 @@ public class ViolinII extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btKazdyWschod = (Button) findViewById(R.id.btKazdyWschod);
         btKazdyWschod.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,7 +108,6 @@ public class ViolinII extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btPanieTwaDobroc = (Button) findViewById(R.id.btPanieTwaDobroc);
         btPanieTwaDobroc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -106,7 +116,6 @@ public class ViolinII extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btPozwolBy = (Button) findViewById(R.id.btPozwolBy);
         btPozwolBy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -115,7 +124,6 @@ public class ViolinII extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btPrzyjdz = (Button) findViewById(R.id.btPrzyjdzJakDeszcz);
         btPrzyjdz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -124,7 +132,6 @@ public class ViolinII extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btSandaly = (Button) findViewById(R.id.btSandaly);
         btSandaly.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -133,7 +140,14 @@ public class ViolinII extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btStoje = (Button) findViewById(R.id.btStojeDzis);
+        btSchowaj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.schowaj_ids)[getResources().getInteger(R.integer.violin_2_id)]);
+                iSong.putExtras(myBundle);
+                startActivity(iSong, myBundle);
+            }
+        });
         btStoje.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -142,7 +156,6 @@ public class ViolinII extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btToKrol = (Button) findViewById(R.id.btToKrol);
         btToKrol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -151,7 +164,14 @@ public class ViolinII extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btWykrzykujcie = (Button) findViewById(R.id.btWykrzykujcie);
+        btWierzycJakPiotr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[getResources().getInteger(R.integer.violin_2_id)]);
+                iSong.putExtras(myBundle);
+                startActivity(iSong, myBundle);
+            }
+        });
         btWykrzykujcie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -160,7 +180,6 @@ public class ViolinII extends AppCompatActivity {
                 startActivity(iSong, myBundle);
             }
         });
-        Button btZiemia = (Button) findViewById(R.id.btZiemia);
         btZiemia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -12,6 +12,7 @@
     <string name="trumpet2">Trąbka II</string>
     <string name="sax">Saksofon</string>
 
+    <string name="czcijmy">Czcijmy Jezusa</string>
     <string name="duszo_ma">Duszo ma Pana chwal</string>
     <string name="genesis">Genesis</string>
     <string name="hej_jezu">Hej Jezu, Królem Tyś!</string>
@@ -24,6 +25,7 @@
     <string name="pozwol_by">Pozwól by</string>
     <string name="przyjdz_jak">Przyjdź jak deszcz</string>
     <string name="sandaly">Sandały</string>
+    <string name="schowaj">Schowaj mnie</string>
     <string name="stoje_dzis">Stoję dziś</string>
     <string name="to_krol">To Król nasz pełen chwały</string>
     <string name="uwielbiamy">Uwielbiamy Cię</string>
@@ -32,13 +34,13 @@
     <string name="zbawca">Zbawca</string>
     <string name="ziemia">Ziemia</string>
 
-    <string-array name="wierzyc_jak_piotr_ids">
-        <item>wierzycJakPiotr1</item>
-        <item>wierzycJakPiotr2</item>
-        <item>wierzycJakPiotr3</item>
-        <item>wierzycJakPiotr4</item>
-        <item>wierzycJakPiotr5</item>
-        <item>wierzycJakPiotr6</item>
+    <string-array name="czcijmy_ids">
+        <item>czcijmy1</item>
+        <item>czcijmy2</item>
+        <item>czcijmy3</item>
+        <item>czcijmy4</item>
+        <item>czcijmy5</item>
+        <item>czcijmy6</item>
     </string-array>
 
     <string-array name="duszo_ma_ids">
@@ -140,15 +142,6 @@
         <item>przyjdz6</item>
     </string-array>
 
-    <string-array name="stoje_dzis_ids">
-        <item>stoje1</item>
-        <item>stoje2</item>
-        <item>stoje3</item>
-        <item>stoje4</item>
-        <item>stoje5</item>
-        <item>stoje6</item>
-    </string-array>
-
     <string-array name="sandaly_ids">
         <item>sandaly1</item>
         <item>sandaly2</item>
@@ -156,6 +149,24 @@
         <item>sandaly4</item>
         <item>sandaly5</item>
         <item>sandaly6</item>
+    </string-array>
+
+    <string-array name="schowaj_ids">
+        <item>schowaj1</item>
+        <item>schowaj2</item>
+        <item>schowaj3</item>
+        <item>schowaj4</item>
+        <item>schowaj5</item>
+        <item>schowaj6</item>
+    </string-array>
+
+    <string-array name="stoje_dzis_ids">
+        <item>stoje1</item>
+        <item>stoje2</item>
+        <item>stoje3</item>
+        <item>stoje4</item>
+        <item>stoje5</item>
+        <item>stoje6</item>
     </string-array>
 
     <string-array name="to_krol_ids">
@@ -174,6 +185,15 @@
         <item>uwielbiamy4</item>
         <item>uwielbiamy5</item>
         <item>uwielbiamy6</item>
+    </string-array>
+
+    <string-array name="wierzyc_jak_piotr_ids">
+        <item>wierzycJakPiotr1</item>
+        <item>wierzycJakPiotr2</item>
+        <item>wierzycJakPiotr3</item>
+        <item>wierzycJakPiotr4</item>
+        <item>wierzycJakPiotr5</item>
+        <item>wierzycJakPiotr6</item>
     </string-array>
 
     <string-array name="wykrzykujcie_ids">

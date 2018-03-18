@@ -20,9 +20,9 @@
         <activity android:name="myrms.myrmstrings.jakubmajchrzak.example.Violin" />
         <activity android:name="myrms.myrmstrings.jakubmajchrzak.example.ViolinII" />
         <activity android:name="myrms.myrmstrings.jakubmajchrzak.example.Song" />
-        <activity android:name="myrms.myrmstrings.jakubmajchrzak.example.Trumpet" />
+        <activity android:name="myrms.myrmstrings.jakubmajchrzak.example.Trumpet"/>
         <activity android:name="myrms.myrmstrings.jakubmajchrzak.example.TrumpetII" />
-        <activity android:name="myrms.myrmstrings.jakubmajchrzak.example.Sax"></activity>
+        <activity android:name="myrms.myrmstrings.jakubmajchrzak.example.Sax"/>
     </application>
 
 </manifest>
