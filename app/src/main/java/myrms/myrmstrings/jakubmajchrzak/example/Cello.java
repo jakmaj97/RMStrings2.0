@@ -96,7 +96,6 @@ public class Cello extends AppCompatActivity implements View.OnClickListener {
         if(bScoreExits) {
             iSong.putExtras(myBundle);
             startActivity(iSong, myBundle);
-            bScoreExits = true;
         }
     }
     @Override

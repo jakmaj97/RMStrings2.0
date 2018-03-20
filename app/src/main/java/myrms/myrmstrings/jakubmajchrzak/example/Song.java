@@ -10,18 +10,20 @@ import android.text.style.ForegroundColorSpan;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.ToggleButton;
+
+import java.io.IOException;
 import java.util.Map;
 
 import java.util.HashMap;
 
-import myrms.myrmstrings.jakubmajchrzak.example.R;
 import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class Song extends AppCompatActivity {
 
-    MediaPlayer mpToStop;
-    boolean bMpSetted;
+    MediaPlayer mpSongPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,57 +32,51 @@ public class Song extends AppCompatActivity {
         s.setSpan(new ForegroundColorSpan(Color.BLACK), 0, getTitle().length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         getSupportActionBar().setTitle(s);
 
+        final ToggleButton tbtPlay = (ToggleButton) findViewById(R.id.tbtPlay);
+        Button btStop = (Button) findViewById(R.id.btStop);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        bMpSetted = true;
+        Map<String, MySong> mapSongsMap = new HashMap<>();
+        mapSongsMap = mpFillMap(mapSongsMap);
 
-        Map<String, MySong> mpSongsMap = new HashMap<>();
-        mpSongsMap = mpFillMap(mpSongsMap);
-
-        Button btPlay = (Button) findViewById(R.id.btPlay);
-        Button btStop = (Button) findViewById(R.id.btStop);
-        Button btPause = (Button) findViewById(R.id.btPause);
         ImageView ivSheet = (ImageView) findViewById(R.id.imageView3);
         PhotoViewAttacher photoViewAttacher = new PhotoViewAttacher(ivSheet);
         photoViewAttacher.update();
-        final MediaPlayer mpCell;
 
-        String sExtra = getIntent().getExtras().getString(getResources().getString(R.string.key));
+        final String sExtra = getIntent().getExtras().getString(getResources().getString(R.string.key));
+        ivSheet.setImageResource(mapSongsMap.get(sExtra).getImage());
 
-        ivSheet.setImageResource(mpSongsMap.get(sExtra).getImage());
-        mpCell = MediaPlayer.create(this, mpSongsMap.get(sExtra).getMusic());
+        final MediaPlayer mpCell = MediaPlayer.create(this, mapSongsMap.get(sExtra).getMusic());;
+        mpSongPlayer = mpCell;
 
-        if(bMpSetted) {
-            mpToStop = mpCell;
-            btPlay.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mpCell.start();
+        tbtPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(tbtPlay.isChecked())
+                    mpSongPlayer.start();
+                else
+                    mpSongPlayer.pause();
+            }
+        });
+        btStop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mpSongPlayer.stop();
+                try {
+                    mpSongPlayer.prepare();
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-            });
-            btStop.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if(mpCell.isPlaying()) {
-                        mpCell.pause();
-                        mpCell.seekTo(getResources().getInteger(R.integer.song_start_point));
-                    }
-                }
-            });
-            btPause.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if(mpCell.isPlaying())
-                        mpCell.pause();
-                }
-            });
-        }
+                if(tbtPlay.isChecked())
+                    tbtPlay.setChecked(false);
+            }
+        });
     }
     @Override
     public void finish() {
-        mpToStop.pause();
-        mpToStop.seekTo(getResources().getInteger(R.integer.song_start_point));
+        mpSongPlayer.stop();
         super.finish();
     }
 
@@ -137,6 +133,7 @@ public class Song extends AppCompatActivity {
         mpMap.put(getResources().getStringArray(R.array.jego_milosc_ids)[getResources().getInteger(R.integer.cello_id)], new MySong(R.drawable.jego_milosc_c, R.raw.jego_milosc_c));
 
         mpMap.put(getResources().getStringArray(R.array.kazdy_wschod_ids)[getResources().getInteger(R.integer.violin_1_id)], new MySong(R.drawable.kazdy_wschod_v, R.raw.kazdy_wschod_v));
+        mpMap.put(getResources().getStringArray(R.array.kazdy_wschod_ids)[getResources().getInteger(R.integer.violin_2_id)], new MySong(R.drawable.kazdy_wschod_v, R.raw.kazdy_wschod_v));
         mpMap.put(getResources().getStringArray(R.array.kazdy_wschod_ids)[getResources().getInteger(R.integer.trumpet_1_id)], new MySong(R.drawable.kazdy_wschod_tt, R.raw.kazdy_wschod_t));
         mpMap.put(getResources().getStringArray(R.array.kazdy_wschod_ids)[getResources().getInteger(R.integer.trumpet_2_id)], new MySong(R.drawable.kazdy_wschod_tt, R.raw.kazdy_wschod_t));
         mpMap.put(getResources().getStringArray(R.array.kazdy_wschod_ids)[getResources().getInteger(R.integer.sax_id)], new MySong(R.drawable.kazdy_wschod_s, R.raw.kazdy_wschod_s));

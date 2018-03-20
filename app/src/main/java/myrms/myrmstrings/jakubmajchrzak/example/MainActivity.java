@@ -24,51 +24,54 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(s);
 
         final Intent iTurnOnViolin = new Intent(this, Violin.class);
+        final Intent iTurnOnViolinII = new Intent(this, ViolinII.class);
+        final Intent iTurnOnCello = new Intent(this, Cello.class);
+        final Intent iTurnOnTrumpet = new Intent(this, Trumpet.class);
+        final Intent iTurnOnTrumpetII = new Intent(this, TrumpetII.class);
+        final Intent iTurnOnSax = new Intent(this, Sax.class);
+
+        Button btTurnOnViolinII = (Button) findViewById(R.id.btViol2);
         Button btTurnOnViolin = (Button) findViewById(R.id.btViol1);
+        Button btTurnOnCello = (Button) findViewById(R.id.btCello);
+        Button btTurnOnTrumpet = (Button) findViewById(R.id.btTrmpt1);
+        Button btTurnOnTrumpetII = (Button) findViewById(R.id.btTrmpt2);
+        Button btTurnOnSax = (Button) findViewById(R.id.btSax);
+
         btTurnOnViolin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(iTurnOnViolin);
             }
         });
-        final Intent iTurnOnViolinII = new Intent(this, ViolinII.class);
-        Button btTurnOnViolinII = (Button) findViewById(R.id.btViol2);
         btTurnOnViolinII.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(iTurnOnViolinII);
             }
         });
-        final Intent iTurnOnCello = new Intent(this, Cello.class);
-        Button btTurnOnCello = (Button) findViewById(R.id.btCello);
         btTurnOnCello.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(iTurnOnCello);
             }
         });
-        final Intent iTurnOnTrumpet = new Intent(this, Trumpet.class);
-        Button btTurnOnTrumpet = (Button) findViewById(R.id.btTrmpt1);
         btTurnOnTrumpet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(iTurnOnTrumpet);
             }
         });
-        final Intent iTurnOnTrumpetII = new Intent(this, TrumpetII.class);
-        Button btTurnOnTrumpetII = (Button) findViewById(R.id.btTrmpt2);
         btTurnOnTrumpetII.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(iTurnOnTrumpetII);
             }
         });
-        final Intent iTurnOnSax = new Intent(this, Sax.class);
-        Button btTurnOnSax = (Button) findViewById(R.id.btSax);
         btTurnOnSax.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(iTurnOnSax);
+
             }
         });
     }
