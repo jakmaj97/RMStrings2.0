@@ -13,7 +13,7 @@ import android.widget.Button;
 
 import myrms.myrmstrings.jakubmajchrzak.example.R;
 
-public class Cello extends AppCompatActivity {
+public class Cello extends AppCompatActivity implements View.OnClickListener {
 
     GlobalMethods gbMyGlobals;
 
@@ -30,9 +30,6 @@ public class Cello extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-        final Intent iSong = new Intent(this, Song.class);
-        final Bundle myBundle = new Bundle();
 
         Button btCzcijmy = (Button) findViewById(R.id.btCzcijmy);
         Button btDuszoMa = (Button) findViewById(R.id.btDuszoMaPanaChwal);
@@ -52,142 +49,56 @@ public class Cello extends AppCompatActivity {
         Button btWykrzykujcie = (Button) findViewById(R.id.btWykrzykujcie);
         Button btZiemia = (Button) findViewById(R.id.btZiemia);
 
-        btCzcijmy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.czcijmy_ids)[getResources().getInteger(R.integer.cello_id)]);
-                iSong.putExtras(myBundle);
-                startActivity(iSong, myBundle);
-            }
-        });
-        btDuszoMa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.duszo_ma_ids)[getResources().getInteger(R.integer.cello_id)]);
-                iSong.putExtras(myBundle);
-                startActivity(iSong, myBundle);
-            }
-        });
-        btGenesis.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.genesis_ids)[getResources().getInteger(R.integer.cello_id)]);
-                iSong.putExtras(myBundle);
-                startActivity(iSong, myBundle);
-            }
-        });
-        btHejJezu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.hej_jezu_ids)[getResources().getInteger(R.integer.cello_id)]);
-                iSong.putExtras(myBundle);
-                startActivity(iSong, myBundle);
-            }
-        });
-        btJakDobrze.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.jak_dobrze_ids)[getResources().getInteger(R.integer.cello_id)]);
-                iSong.putExtras(myBundle);
-                startActivity(iSong, myBundle);
-            }
-        });
-        btJegoMilosc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.jego_milosc_ids)[getResources().getInteger(R.integer.cello_id)]);
-                iSong.putExtras(myBundle);
-                startActivity(iSong, myBundle);
-            }
-        });
-        btKazdyWschod.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gbMyGlobals.vEmptySongToast();
-            }
-        });
-        btPanieTwaDobroc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.panie_twa_dobroc_ids)[getResources().getInteger(R.integer.cello_id)]);
-                iSong.putExtras(myBundle);
-                startActivity(iSong, myBundle);
-            }
-        });
-        btPozwolBy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.pozwol_by_ids)[getResources().getInteger(R.integer.cello_id)]);
-                iSong.putExtras(myBundle);
-                startActivity(iSong, myBundle);
-            }
-        });
-        btPrzyjdz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.przyjdz_jak_ids)[getResources().getInteger(R.integer.cello_id)]);
-                iSong.putExtras(myBundle);
-                startActivity(iSong, myBundle);
-            }
-        });
-        btSandaly.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.sandaly_ids)[getResources().getInteger(R.integer.cello_id)]);
-                iSong.putExtras(myBundle);
-                startActivity(iSong, myBundle);
-            }
-        });
-        btSchowaj.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.schowaj_ids)[getResources().getInteger(R.integer.cello_id)]);
-                iSong.putExtras(myBundle);
-                startActivity(iSong, myBundle);
-            }
-        });
-        btStoje.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.stoje_dzis_ids)[getResources().getInteger(R.integer.cello_id)]);
-                iSong.putExtras(myBundle);
-                startActivity(iSong, myBundle);
-            }
-        });
-        btToKrol.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.to_krol_ids)[getResources().getInteger(R.integer.cello_id)]);
-                iSong.putExtras(myBundle);
-                startActivity(iSong, myBundle);
-            }
-        });
-        btWierzycJakPiotr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[getResources().getInteger(R.integer.cello_id)]);
-                iSong.putExtras(myBundle);
-                startActivity(iSong, myBundle);
-            }
-        });
-        btWykrzykujcie.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.wykrzykujcie_ids)[getResources().getInteger(R.integer.cello_id)]);
-                iSong.putExtras(myBundle);
-                startActivity(iSong, myBundle);
-            }
-        });
-        btZiemia.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.ziemia_ids)[getResources().getInteger(R.integer.cello_id)]);
-                iSong.putExtras(myBundle);
-                startActivity(iSong, myBundle);
-            }
-        });
+        btCzcijmy.setOnClickListener(this);
+        btDuszoMa.setOnClickListener(this);
+        btGenesis.setOnClickListener(this);
+        btHejJezu.setOnClickListener(this);
+        btJakDobrze.setOnClickListener(this);
+        btJegoMilosc.setOnClickListener(this);
+        btKazdyWschod.setOnClickListener(this);
+        btPanieTwaDobroc.setOnClickListener(this);
+        btPozwolBy.setOnClickListener(this);
+        btPrzyjdz.setOnClickListener(this);
+        btSandaly.setOnClickListener(this);
+        btSchowaj.setOnClickListener(this);
+        btStoje.setOnClickListener(this);
+        btToKrol.setOnClickListener(this);
+        btWierzycJakPiotr.setOnClickListener(this);
+        btWykrzykujcie.setOnClickListener(this);
+        btZiemia.setOnClickListener(this);
     }
+    @Override
+    public void onClick(View v) {
+        final Bundle myBundle = new Bundle();
+        final Intent iSong = new Intent(this, Song.class);
+        boolean bScoreExits = true;
 
+        switch (v.getId()) {
+            case R.id.btCzcijmy: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.czcijmy_ids)[getResources().getInteger(R.integer.cello_id)]); break;
+            case R.id.btDuszoMaPanaChwal: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.duszo_ma_ids)[getResources().getInteger(R.integer.cello_id)]); break;
+            case R.id.btGenesis: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.genesis_ids)[getResources().getInteger(R.integer.cello_id)]); break;
+            case R.id.btHejJezu: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.hej_jezu_ids)[getResources().getInteger(R.integer.cello_id)]); break;
+            case R.id.btJakDobrze: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.jak_dobrze_ids)[getResources().getInteger(R.integer.cello_id)]); break;
+            case R.id.btJegoMilosc: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.jego_milosc_ids)[getResources().getInteger(R.integer.cello_id)]); break;
+            case R.id.btKazdyWschod: gbMyGlobals.vEmptySongToast(); bScoreExits = false; break;
+            case R.id.btPanieTwaDobroc: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.panie_twa_dobroc_ids)[getResources().getInteger(R.integer.cello_id)]); break;
+            case R.id.btPozwolBy: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.pozwol_by_ids)[getResources().getInteger(R.integer.cello_id)]); break;
+            case R.id.btPrzyjdzJakDeszcz: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.przyjdz_jak_ids)[getResources().getInteger(R.integer.cello_id)]); break;
+            case R.id.btSandaly: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.sandaly_ids)[getResources().getInteger(R.integer.cello_id)]); break;
+            case R.id.btSchowaj: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.schowaj_ids)[getResources().getInteger(R.integer.cello_id)]); break;
+            case R.id.btStojeDzis: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.stoje_dzis_ids)[getResources().getInteger(R.integer.cello_id)]); break;
+            case R.id.btToKrol: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.to_krol_ids)[getResources().getInteger(R.integer.cello_id)]); break;
+            case R.id.btWierzycJakPiotr: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[getResources().getInteger(R.integer.cello_id)]); break;
+            case R.id.btWykrzykujcie: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.wykrzykujcie_ids)[getResources().getInteger(R.integer.cello_id)]); break;
+            case R.id.btZiemia: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.ziemia_ids)[getResources().getInteger(R.integer.cello_id)]); break;
+            default: break;
+        }
+        if(bScoreExits) {
+            iSong.putExtras(myBundle);
+            startActivity(iSong, myBundle);
+            bScoreExits = true;
+        }
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId()== android.R.id.home)
