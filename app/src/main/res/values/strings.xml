@@ -12,6 +12,15 @@
     <string name="trumpet2">Trąbka II</string>
     <string name="sax">Saksofon</string>
 
+    <string-array name="instruments">
+        <item>Skrzypce I</item>
+        <item>Skrzypce II</item>
+        <item>Wiolonczela</item>
+        <item>Trąbka I</item>
+        <item>Trąbka II</item>
+        <item>Saksofon</item>
+    </string-array>
+
     <string name="czcijmy">Czcijmy Jezusa</string>
     <string name="duszo_ma">Duszo ma Pana chwal</string>
     <string name="genesis">Genesis</string>
@@ -33,6 +42,48 @@
     <string name="wykrzykujcie">Wykrzykujcie na cześć Pana</string>
     <string name="zbawca">Zbawca</string>
     <string name="ziemia">Ziemia</string>
+
+    <string-array name="symp_song_names">
+        <item name="czcijmyN">Czcijmy Jezusa</item>
+        <item name="duszo_maN">Duszo ma Pana chwal</item>
+        <item name="genesisN">Genesis</item>
+        <item name="hej_jezuN">Hej Jezu, Królem Tyś!</item>
+        <item name="jak_dobrzeN">Jak dobrze jest dziękować Ci</item>
+        <item name="jego_miloscN">Jego Miłość</item>
+        <item name="kazdy_wschodN">Każdy wschód słońca</item>
+        <item name="panie_twaN">Panie Twa Dobroć i łaska</item>
+        <item name="pozwol_byN">Pozwól by</item>
+        <item name="przyjdz_jakN">Przyjdź jak deszcz</item>
+        <item name="sandalyN">Sandały</item>
+        <item name="schowajN">Schowaj mnie</item>
+        <item name="stoje_dzisN">Stoję dziś</item>
+        <item name="to_krolN">To Król nasz pełen chwały</item>
+        <item name="wierzyc_jakN">Wierzyć jak Piotr</item>
+        <item name="wykrzykujcieN">Wykrzykujcie na cześć Pana</item>
+        <item name="ziemiaN">Ziemia</item>
+    </string-array>
+
+    <string-array name="brass_song_names">
+        <item name="czcijmyB">Czcijmy Jezusa</item>
+        <item name="duszo_maB">Duszo ma Pana chwal</item>
+        <item name="genesisB">Genesis</item>
+        <item name="hej_jezuB">Hej Jezu, Królem Tyś!</item>
+        <item name="idzB">Idź i Głoś</item>
+        <item name="jak_dobrzeB">Jak dobrze jest dziękować Ci</item>
+        <item name="kazdy_wschodB">Każdy wschód słońca</item>
+        <item name="nadejdzie_dzienB">Nadejdzie dzień</item>
+        <item name="panie_twaB">Panie Twa Dobroć i łaska</item>
+        <item name="przyjdz_jakB">Przyjdź jak deszcz</item>
+        <item name="sandalyB">Sandały</item>
+        <item name="schowajB">Schowaj mnie</item>
+        <item name="stoje_dzisB">Stoję dziś</item>
+        <item name="to_krolB">To Król nasz pełen chwały</item>
+        <item name="uwielbiamyB">Uwielbiamy Cię</item>
+        <item name="wierzyc_jakB">Wierzyć jak Piotr</item>
+        <item name="wykrzykujcieB">Wykrzykujcie na cześć Pana</item>
+        <item name="zbawcaB">Zbawca</item>
+        <item name="ziemiaB">Ziemia</item>
+    </string-array>
 
     <string-array name="czcijmy_ids">
         <item>czcijmy1</item>

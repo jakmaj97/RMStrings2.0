@@ -8,20 +8,33 @@ import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 
 import myrms.myrmstrings.jakubmajchrzak.example.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener, APPCONSTANTS {
+
+    ListView lvInstruments;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        lvInstruments = findViewById(R.id.lvInstruments);
+
         SpannableString s = new SpannableString(getTitle());
         s.setSpan(new ForegroundColorSpan(Color.BLACK), 0, getTitle().length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         getSupportActionBar().setTitle(s);
+
+        lvInstruments.setOnItemClickListener(this);
+        ArrayAdapter<String> aaViolinAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.instruments));
+        lvInstruments.setAdapter(aaViolinAdapter);
+    }
+    public void onItemClick(AdapterView<?> parent, View view, int iPosition, long lId) {
 
         final Intent iTurnOnViolin = new Intent(this, Violin.class);
         final Intent iTurnOnViolinII = new Intent(this, ViolinII.class);
@@ -30,49 +43,14 @@ public class MainActivity extends AppCompatActivity {
         final Intent iTurnOnTrumpetII = new Intent(this, TrumpetII.class);
         final Intent iTurnOnSax = new Intent(this, Sax.class);
 
-        Button btTurnOnViolinII = (Button) findViewById(R.id.btViol2);
-        Button btTurnOnViolin = (Button) findViewById(R.id.btViol1);
-        Button btTurnOnCello = (Button) findViewById(R.id.btCello);
-        Button btTurnOnTrumpet = (Button) findViewById(R.id.btTrmpt1);
-        Button btTurnOnTrumpetII = (Button) findViewById(R.id.btTrmpt2);
-        Button btTurnOnSax = (Button) findViewById(R.id.btSax);
-
-        btTurnOnViolin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(iTurnOnViolin);
-            }
-        });
-        btTurnOnViolinII.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(iTurnOnViolinII);
-            }
-        });
-        btTurnOnCello.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(iTurnOnCello);
-            }
-        });
-        btTurnOnTrumpet.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(iTurnOnTrumpet);
-            }
-        });
-        btTurnOnTrumpetII.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(iTurnOnTrumpetII);
-            }
-        });
-        btTurnOnSax.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(iTurnOnSax);
-
-            }
-        });
+        switch (iPosition) {
+            case I_VIOL1_POS: startActivity(iTurnOnViolin); break;
+            case I_VIOL2_POS: startActivity(iTurnOnViolinII); break;
+            case I_CELLO_POS: startActivity(iTurnOnCello); break;
+            case I_TRMPT1_POS: startActivity(iTurnOnTrumpet); break;
+            case I_TRMPT2_POS: startActivity(iTurnOnTrumpetII); break;
+            case I_SAX_POS: startActivity(iTurnOnSax); break;
+            default: break;
+        }
     }
 }

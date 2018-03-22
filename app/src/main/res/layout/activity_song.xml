@@ -21,8 +21,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="292dp"
-        android:layout_height="43dp"
+        android:layout_width="214dp"
+        android:layout_height="30dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:drawableLeft="@drawable/ic_play_pause_black_24dp"
+            android:background="@drawable/buttonshape"
             android:gravity="center"
             android:textOff="Play"
             android:textOn="Pause"
@@ -47,8 +47,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
+            android:background="@drawable/buttonshape"
             android:gravity="center"
-            android:drawableLeft="@drawable/ic_stop_black_24dp"
             android:text="Stop" />
     </LinearLayout>
 
