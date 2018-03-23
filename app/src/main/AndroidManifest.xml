@@ -9,20 +9,15 @@
         android:roundIcon="@drawable/web_hi_res_512"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="myrms.myrmstrings.jakubmajchrzak.example.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="myrms.myrmstrings.jakubmajchrzak.example.Cello" />
-        <activity android:name="myrms.myrmstrings.jakubmajchrzak.example.Violin" />
-        <activity android:name="myrms.myrmstrings.jakubmajchrzak.example.ViolinII" />
-        <activity android:name="myrms.myrmstrings.jakubmajchrzak.example.Song" />
-        <activity android:name="myrms.myrmstrings.jakubmajchrzak.example.Trumpet"/>
-        <activity android:name="myrms.myrmstrings.jakubmajchrzak.example.TrumpetII" />
-        <activity android:name="myrms.myrmstrings.jakubmajchrzak.example.Sax"/>
+        <activity android:name=".Song" />
+        <activity android:name=".Instrument"></activity>
     </application>
 
 </manifest>

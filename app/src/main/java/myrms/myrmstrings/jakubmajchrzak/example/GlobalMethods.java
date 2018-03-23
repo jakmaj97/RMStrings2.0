@@ -22,7 +22,4 @@ public class GlobalMethods {
         view.setBackgroundResource(R.color.colorPrimary);
         toast.show();
     }
-    public boolean bGetScoreExist() {
-        return bScoresExist;
-    }
 }

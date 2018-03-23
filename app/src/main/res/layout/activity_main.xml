@@ -18,7 +18,8 @@
         android:layout_height="wrap_content"
         android:text="@string/choose_instrument_comm"
         android:textSize="30dp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:background="@drawable/back"/>
 
     <Space
         android:layout_width="match_parent"

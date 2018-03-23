@@ -31,26 +31,24 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         getSupportActionBar().setTitle(s);
 
         lvInstruments.setOnItemClickListener(this);
-        ArrayAdapter<String> aaViolinAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.instruments));
+        ArrayAdapter<String> aaViolinAdapter = new ArrayAdapter<>(this, R.layout.center_row, R.id.lvMyListView, getResources().getStringArray(R.array.instruments));
         lvInstruments.setAdapter(aaViolinAdapter);
     }
     public void onItemClick(AdapterView<?> parent, View view, int iPosition, long lId) {
 
-        final Intent iTurnOnViolin = new Intent(this, Violin.class);
-        final Intent iTurnOnViolinII = new Intent(this, ViolinII.class);
-        final Intent iTurnOnCello = new Intent(this, Cello.class);
-        final Intent iTurnOnTrumpet = new Intent(this, Trumpet.class);
-        final Intent iTurnOnTrumpetII = new Intent(this, TrumpetII.class);
-        final Intent iTurnOnSax = new Intent(this, Sax.class);
+        final Bundle bundInstrumentChoice = new Bundle();
+        final Intent inInstrument = new Intent(this, Instrument.class);
 
         switch (iPosition) {
-            case I_VIOL1_POS: startActivity(iTurnOnViolin); break;
-            case I_VIOL2_POS: startActivity(iTurnOnViolinII); break;
-            case I_CELLO_POS: startActivity(iTurnOnCello); break;
-            case I_TRMPT1_POS: startActivity(iTurnOnTrumpet); break;
-            case I_TRMPT2_POS: startActivity(iTurnOnTrumpetII); break;
-            case I_SAX_POS: startActivity(iTurnOnSax); break;
+            case I_VIOL1_POS: bundInstrumentChoice.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.instruments)[I_VIOL1_POS]); break;
+            case I_VIOL2_POS: bundInstrumentChoice.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.instruments)[I_VIOL2_POS]); break;
+            case I_CELLO_POS: bundInstrumentChoice.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.instruments)[I_CELLO_POS]); break;
+            case I_TRMPT1_POS: bundInstrumentChoice.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.instruments)[I_TRMPT1_POS]); break;
+            case I_TRMPT2_POS: bundInstrumentChoice.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.instruments)[I_TRMPT2_POS]); break;
+            case I_SAX_POS: bundInstrumentChoice.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.instruments)[I_SAX_POS]); break;
             default: break;
         }
+        inInstrument.putExtras(bundInstrumentChoice);
+        startActivity(inInstrument, bundInstrumentChoice);
     }
 }

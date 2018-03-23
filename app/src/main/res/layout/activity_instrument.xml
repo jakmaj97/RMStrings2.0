@@ -5,13 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="myrms.myrmstrings.jakubmajchrzak.example.Violin">
+    tools:context="myrms.myrmstrings.jakubmajchrzak.example.Instrument">
 
     <TextView
-        android:id="@+id/tvViolin1"
+        android:id="@+id/tvInstrument"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Skrzypce I" />
+        android:layout_height="wrap_content" />
 
     <Space
         android:layout_width="match_parent"
@@ -23,7 +22,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/choose_song_comm"
-        android:textSize="30dp" />
+        android:textSize="30dp"
+        android:background="@drawable/back"/>
 
     <Space
         android:layout_width="match_parent"
