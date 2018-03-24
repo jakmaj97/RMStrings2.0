@@ -45,4 +45,7 @@ public interface APPCONSTANTS {
     int I_TRMPT1_POS = 3;
     int I_TRMPT2_POS = 4;
     int I_SAX_POS = 5;
+
+    int I_START_SONG = 0;
+    int I_DELAY = 1;
 }

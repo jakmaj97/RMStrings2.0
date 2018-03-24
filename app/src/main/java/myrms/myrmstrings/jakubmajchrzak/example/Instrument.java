@@ -20,7 +20,6 @@ public class Instrument extends AppCompatActivity implements AdapterView.OnItemC
     TextView tvInstrument;
     ArrayAdapter<String> aaInstrumentAdapter;
     String sExtra;
-    GlobalMethods gbMyGlobals;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +28,6 @@ public class Instrument extends AppCompatActivity implements AdapterView.OnItemC
 
         lvSongs = (ListView) findViewById(R.id.lvSongs);
         tvInstrument = (TextView) findViewById(R.id.tvInstrument);
-        gbMyGlobals = new GlobalMethods(getApplicationContext());
         sExtra = getIntent().getExtras().getString(getResources().getString(R.string.key));
 
         SpannableString s = new SpannableString(getTitle());
@@ -110,15 +108,7 @@ public class Instrument extends AppCompatActivity implements AdapterView.OnItemC
             case I_HEJ_JEZU_S_POS: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.hej_jezu_ids)[iInstrumentIndex]); break;
             case I_JAK_DOBRZE_S_POS: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.jak_dobrze_ids)[iInstrumentIndex]); break;
             case I_JEGO_MILOSC_S_POS: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.jego_milosc_ids)[iInstrumentIndex]); break;
-            case I_KAZDY_WSCHOD_S_POS: {
-                if(iInstrumentIndex != I_CELLO_POS)
-                    myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.kazdy_wschod_ids)[iInstrumentIndex]);
-                else {
-                    gbMyGlobals.vEmptySongToast();
-                    bScoreExist = false;
-                }
-                break;
-            }
+            case I_KAZDY_WSCHOD_S_POS: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.kazdy_wschod_ids)[iInstrumentIndex]); break;
             case I_PANIE_TWA_DOBROC_S_POS: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.panie_twa_dobroc_ids)[iInstrumentIndex]); break;
             case I_POZWOL_S_POS: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.pozwol_by_ids)[iInstrumentIndex]); break;
             case I_PRZYJDZ_JAK_S_POS: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.przyjdz_jak_ids)[iInstrumentIndex]); break;
@@ -152,15 +142,7 @@ public class Instrument extends AppCompatActivity implements AdapterView.OnItemC
             case I_TO_KROL_B_POS: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.to_krol_ids)[iInstrumentIndex]); break;
             case I_UWIELBIAMY: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.uwielbiamy_cie_ids)[iInstrumentIndex]); break;
             case I_WIERZYC_JAK_B_POS: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.wierzyc_jak_piotr_ids)[iInstrumentIndex]); break;
-            case I_WYKRZ_B_POS: {
-                if(iInstrumentIndex != I_SAX_POS)
-                    myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.wykrzykujcie_ids)[iInstrumentIndex]);
-                else {
-                    gbMyGlobals.vEmptySongToast();
-                    bScoreExist = false;
-                }
-                break;
-            }
+            case I_WYKRZ_B_POS: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.wykrzykujcie_ids)[iInstrumentIndex]); break;
             case I_ZBAWCA_B_POS: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.zbawca_ids)[iInstrumentIndex]); break;
             case I_ZIEMIA_B_POS: myBundle.putString(getResources().getString(R.string.key), getResources().getStringArray(R.array.ziemia_ids)[iInstrumentIndex]); break;
             default: break;

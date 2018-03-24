@@ -1,7 +1,9 @@
 package myrms.myrmstrings.jakubmajchrzak.example;
 
 import android.graphics.Color;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Spannable;
@@ -12,6 +14,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import java.io.IOException;
@@ -24,6 +28,11 @@ import uk.co.senab.photoview.PhotoViewAttacher;
 public class Song extends AppCompatActivity implements APPCONSTANTS {
 
     MediaPlayer mpSongPlayer;
+    SeekBar sbSongTime;
+    Handler hSongHandler;
+    Runnable rSongRunnable;
+    TextView tvSecs;
+    boolean bStopClicked;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +41,18 @@ public class Song extends AppCompatActivity implements APPCONSTANTS {
         s.setSpan(new ForegroundColorSpan(Color.BLACK), 0, getTitle().length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         getSupportActionBar().setTitle(s);
 
+        tvSecs = (TextView) findViewById(R.id.tvSecs);
+        bStopClicked = false;
         final ToggleButton tbtPlay = (ToggleButton) findViewById(R.id.tbtPlay);
         Button btStop = (Button) findViewById(R.id.btStop);
+        sbSongTime = (SeekBar) findViewById(R.id.sbSongTime);
+        hSongHandler = new Handler();
+        rSongRunnable = new Runnable() {
+            @Override
+            public void run() {
+                vSeekUpdation();
+            }
+        };
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -48,24 +67,32 @@ public class Song extends AppCompatActivity implements APPCONSTANTS {
         final String sExtra = getIntent().getExtras().getString(getResources().getString(R.string.key));
         ivSheet.setImageResource(mapSongsMap.get(sExtra).getImage());
 
-        final MediaPlayer mpCell = MediaPlayer.create(this, mapSongsMap.get(sExtra).getMusic());;
-        mpSongPlayer = mpCell;
+        mpSongPlayer = MediaPlayer.create(this, mapSongsMap.get(sExtra).getMusic());
+
+        sbSongTime.setMax(mpSongPlayer.getDuration());
 
         tbtPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(tbtPlay.isChecked())
+                vSeekUpdation();
+                if(tbtPlay.isChecked()) {
                     mpSongPlayer.start();
-                else
+                    sbSongTime.setProgress(mpSongPlayer.getCurrentPosition());
+                }
+                else {
                     mpSongPlayer.pause();
+                    sbSongTime.setProgress(mpSongPlayer.getCurrentPosition());
+                }
             }
         });
         btStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mpSongPlayer.stop();
+                bStopClicked = true;
                 try {
+                    mpSongPlayer.stop();
                     mpSongPlayer.prepare();
+                    sbSongTime.setProgress(I_START_SONG);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -73,13 +100,53 @@ public class Song extends AppCompatActivity implements APPCONSTANTS {
                     tbtPlay.setChecked(false);
             }
         });
+        sbSongTime.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if(progress/1000 < 10)
+                    tvSecs.setText("0" + String.valueOf(progress/1000) + "s");
+                else
+                    tvSecs.setText(String.valueOf(progress/1000) + "s");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                if(mpSongPlayer.isPlaying())
+                    mpSongPlayer.pause();
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                mpSongPlayer.seekTo(seekBar.getProgress());
+                sbSongTime.setProgress(mpSongPlayer.getCurrentPosition());
+                hSongHandler.postDelayed(rSongRunnable, I_DELAY);
+                if(!tbtPlay.isChecked())
+                    tbtPlay.setChecked(true);
+                if(seekBar.getProgress() != seekBar.getMax())
+                    mpSongPlayer.start();
+            }
+        });
+    }
+    public void vSeekUpdation() {
+        if(mpSongPlayer != null) {
+            if(bStopClicked) {
+                mpSongPlayer.seekTo(0);
+                bStopClicked = false;
+            }
+            int iMPos = mpSongPlayer.getCurrentPosition();
+            sbSongTime.setProgress(mpSongPlayer.getCurrentPosition());
+            hSongHandler.postDelayed(rSongRunnable, I_DELAY);
+            if(iMPos/1000 < 10)
+                tvSecs.setText("0" + String.valueOf(iMPos/1000) + "s");
+            else
+                tvSecs.setText(String.valueOf(iMPos/1000) + "s");
+        }
     }
     @Override
     public void finish() {
         mpSongPlayer.stop();
         super.finish();
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == android.R.id.home) {
@@ -134,6 +201,7 @@ public class Song extends AppCompatActivity implements APPCONSTANTS {
 
         mpMap.put(getResources().getStringArray(R.array.kazdy_wschod_ids)[I_VIOL1_POS], new MySong(R.drawable.kazdy_wschod_v, R.raw.kazdy_wschod_v));
         mpMap.put(getResources().getStringArray(R.array.kazdy_wschod_ids)[I_VIOL2_POS], new MySong(R.drawable.kazdy_wschod_v, R.raw.kazdy_wschod_v));
+        mpMap.put(getResources().getStringArray(R.array.kazdy_wschod_ids)[I_CELLO_POS], new MySong(R.drawable.kazdy_wschod_c, R.raw.kazdy_wschod_c));
         mpMap.put(getResources().getStringArray(R.array.kazdy_wschod_ids)[I_TRMPT1_POS], new MySong(R.drawable.kazdy_wschod_tt, R.raw.kazdy_wschod_t));
         mpMap.put(getResources().getStringArray(R.array.kazdy_wschod_ids)[I_TRMPT2_POS], new MySong(R.drawable.kazdy_wschod_tt, R.raw.kazdy_wschod_t));
         mpMap.put(getResources().getStringArray(R.array.kazdy_wschod_ids)[I_SAX_POS], new MySong(R.drawable.kazdy_wschod_s, R.raw.kazdy_wschod_s));
@@ -204,6 +272,7 @@ public class Song extends AppCompatActivity implements APPCONSTANTS {
         mpMap.put(getResources().getStringArray(R.array.wykrzykujcie_ids)[I_CELLO_POS], new MySong(R.drawable.wykrzykujcie_c, R.raw.wykrzykujcie_c));
         mpMap.put(getResources().getStringArray(R.array.wykrzykujcie_ids)[I_TRMPT1_POS], new MySong(R.drawable.wykrz_t1, R.raw.wykrz_t1));
         mpMap.put(getResources().getStringArray(R.array.wykrzykujcie_ids)[I_TRMPT2_POS], new MySong(R.drawable.wykrz_t2, R.raw.wykrz_t2));
+        mpMap.put(getResources().getStringArray(R.array.wykrzykujcie_ids)[I_SAX_POS], new MySong(R.drawable.wykrz_s, R.raw.wykrz_s));
 
         mpMap.put(getResources().getStringArray(R.array.zbawca_ids)[I_TRMPT1_POS], new MySong(R.drawable.zbawca_t1, R.raw.zbawca_t1));
         mpMap.put(getResources().getStringArray(R.array.zbawca_ids)[I_TRMPT2_POS], new MySong(R.drawable.zbawca_t2, R.raw.zbawca_t2));

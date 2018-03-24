@@ -21,8 +21,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="214dp"
-        android:layout_height="30dp"
+        android:layout_width="357dp"
+        android:layout_height="36dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -33,9 +33,9 @@
 
         <ToggleButton
             android:id="@+id/tbtPlay"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="10"
             android:background="@drawable/buttonshape"
             android:gravity="center"
             android:textOff="Play"
@@ -44,12 +44,27 @@
 
         <Button
             android:id="@+id/btStop"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="10"
             android:background="@drawable/buttonshape"
             android:gravity="center"
             android:text="Stop" />
+
+        <SeekBar
+            android:id="@+id/sbSongTime"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="200"
+            android:background="@null" />
+
+        <TextView
+            android:id="@+id/tvSecs"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="00s" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
