@@ -48,4 +48,7 @@ public interface APPCONSTANTS {
 
     int I_START_SONG = 0;
     int I_DELAY = 1;
+    int I_SECOND_DIVIDER = 1000;
+    int I_DIGITS = 10;
+    int I_SECONDS = 60;
 }

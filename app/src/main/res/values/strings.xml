@@ -4,6 +4,9 @@
     <string name="no_scores_comm">Brak nut do tego utworu :(</string>
     <string name="choose_instrument_comm">Wybierz Instrument</string>
     <string name="choose_song_comm">Wybierz Utwór</string>
+    <string name="second">s</string>
+    <string name="zero">0</string>
+    <string name="colon">:</string>
 
     <string name="viol1">Skrzypce I</string>
     <string name="viol2">Skrzypce II</string>

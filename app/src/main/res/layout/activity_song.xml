@@ -64,7 +64,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="00s" />
+            android:text="00:00" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

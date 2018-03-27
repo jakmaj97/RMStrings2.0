@@ -1,5 +1,6 @@
 package myrms.myrmstrings.jakubmajchrzak.example;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -27,12 +28,17 @@ import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class Song extends AppCompatActivity implements APPCONSTANTS {
 
+    Button btStop;
     MediaPlayer mpSongPlayer;
     SeekBar sbSongTime;
     Handler hSongHandler;
     Runnable rSongRunnable;
     TextView tvSecs;
+    ToggleButton tbtPlay;
     boolean bStopClicked;
+    boolean bSeekStop;
+    boolean bFirstUsage;
+    int i = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +48,11 @@ public class Song extends AppCompatActivity implements APPCONSTANTS {
         getSupportActionBar().setTitle(s);
 
         tvSecs = (TextView) findViewById(R.id.tvSecs);
+        bSeekStop = false;
         bStopClicked = false;
-        final ToggleButton tbtPlay = (ToggleButton) findViewById(R.id.tbtPlay);
-        Button btStop = (Button) findViewById(R.id.btStop);
+        bFirstUsage = true;
+        tbtPlay = (ToggleButton) findViewById(R.id.tbtPlay);
+        btStop = (Button) findViewById(R.id.btStop);
         sbSongTime = (SeekBar) findViewById(R.id.sbSongTime);
         hSongHandler = new Handler();
         rSongRunnable = new Runnable() {
@@ -74,10 +82,22 @@ public class Song extends AppCompatActivity implements APPCONSTANTS {
         tbtPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(sbSongTime.getProgress() == sbSongTime.getMax()) {
+                    tbtPlay.setChecked(false);
+                }
                 vSeekUpdation();
+                if(!tbtPlay.isChecked() && sbSongTime.getProgress() == sbSongTime.getMax()){
+                    sbSongTime.setProgress(I_START_SONG);
+                    tbtPlay.setChecked(true);
+                    bSeekStop = true;
+                }
                 if(tbtPlay.isChecked()) {
-                    mpSongPlayer.start();
+                    if(bSeekStop) {
+                        mpSongPlayer.seekTo(I_START_SONG);
+                        bSeekStop = false;
+                    }
                     sbSongTime.setProgress(mpSongPlayer.getCurrentPosition());
+                    mpSongPlayer.start();
                 }
                 else {
                     mpSongPlayer.pause();
@@ -103,16 +123,14 @@ public class Song extends AppCompatActivity implements APPCONSTANTS {
         sbSongTime.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                if(progress/1000 < 10)
-                    tvSecs.setText("0" + String.valueOf(progress/1000) + "s");
-                else
-                    tvSecs.setText(String.valueOf(progress/1000) + "s");
+                tvSecs.setText(sTimeFormat(progress/I_SECOND_DIVIDER));
             }
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-                if(mpSongPlayer.isPlaying())
+                if(mpSongPlayer.isPlaying()) {
                     mpSongPlayer.pause();
+                }
             }
 
             @Override
@@ -120,26 +138,26 @@ public class Song extends AppCompatActivity implements APPCONSTANTS {
                 mpSongPlayer.seekTo(seekBar.getProgress());
                 sbSongTime.setProgress(mpSongPlayer.getCurrentPosition());
                 hSongHandler.postDelayed(rSongRunnable, I_DELAY);
-                if(!tbtPlay.isChecked())
+                if(!tbtPlay.isChecked() && seekBar.getProgress() != seekBar.getMax())
                     tbtPlay.setChecked(true);
                 if(seekBar.getProgress() != seekBar.getMax())
                     mpSongPlayer.start();
+                else  {
+                    tbtPlay.setChecked(false);
+                }
             }
         });
     }
     public void vSeekUpdation() {
         if(mpSongPlayer != null) {
             if(bStopClicked) {
-                mpSongPlayer.seekTo(0);
+                mpSongPlayer.seekTo(I_START_SONG);
                 bStopClicked = false;
             }
             int iMPos = mpSongPlayer.getCurrentPosition();
             sbSongTime.setProgress(mpSongPlayer.getCurrentPosition());
             hSongHandler.postDelayed(rSongRunnable, I_DELAY);
-            if(iMPos/1000 < 10)
-                tvSecs.setText("0" + String.valueOf(iMPos/1000) + "s");
-            else
-                tvSecs.setText(String.valueOf(iMPos/1000) + "s");
+            tvSecs.setText(sTimeFormat(iMPos/I_SECOND_DIVIDER));
         }
     }
     @Override
@@ -153,6 +171,22 @@ public class Song extends AppCompatActivity implements APPCONSTANTS {
             finish();
         }
         return super.onOptionsItemSelected(item);
+    }
+    String sTimeFormat(int iSeconds) {
+        int iMins = iSeconds/I_SECONDS;
+        int iSecs = iSeconds%I_SECONDS;
+        if(iMins < I_DIGITS) {
+            if(iSecs < I_DIGITS)
+                return getResources().getString(R.string.zero)+iMins+getResources().getString(R.string.colon)+getResources().getString(R.string.zero)+iSecs;
+            else
+                return getResources().getString(R.string.zero)+iMins+getResources().getString(R.string.colon)+iSecs;
+        }
+        else {
+            if(iSecs < I_DIGITS)
+                return iMins+getResources().getString(R.string.colon)+getResources().getString(R.string.zero)+iSecs;
+            else
+                return iMins+getResources().getString(R.string.colon)+iSecs;
+        }
     }
     Map mpFillMap(Map<String, MySong> mpMap) {
 
